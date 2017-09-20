@@ -1,0 +1,13 @@
+.text_block {
+    width: 50%;
+    line-height: 3em;
+}
+
+.anchor_page {
+    color: inherit;
+    text-decoration: none;
+}
+
+.anchor_page:hover {
+    text-decoration: underline;
+}
