@@ -1,0 +1,66 @@
+div:nth-child(even) {
+    color: red;
+}
+
+div:nth-child(odd) {
+    color: green;
+}
+
+div:nth-child(2n + 6) {
+    text-decoration: underline;
+}
+
+div:nth-child(-n + 4) {
+    text-transform: lowercase;
+}
+
+div:nth-last-child(-n + 6) {
+    text-transform: uppercase;
+}
+
+div:nth-child(1) {
+    font-size: 2.4em;
+}
+
+div:nth-child(2) {
+    font-size: 2.2em;
+}
+
+div:nth-child(3) {
+    font-size: 2em;
+}
+
+div:nth-child(4) {
+    font-size: 1.8em;
+}
+
+div:nth-child(5) {
+    font-size: 1.6em;
+}
+
+div:nth-child(6) {
+    font-size: 1.4em;
+}
+
+div:nth-child(7) {
+    font-size: 1.2em;
+}
+
+div:nth-child(8) {
+    font-size: 1em;
+}
+
+div:nth-child(9) {
+    font-size: 0.8em;
+}
+
+div:nth-child(10) {
+    font-size: 0.6em;
+}
+
+
+
+
+
+
+
