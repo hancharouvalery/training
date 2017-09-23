@@ -1,0 +1,97 @@
+.calendarForm, input {
+    font: 16px Helvetica, sans-serif;
+}
+
+.describeText {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.headline {
+    padding-top: 5px;
+    font-size: 12px;
+    color: #979797;
+}
+
+hr {
+    margin-top: 0;
+    opacity: .2;
+}
+
+input {
+    display: block;
+    border: none;
+    background-color: #FAFAFA;
+    outline: none;
+}
+
+.setDate {
+    float: left;
+    width: 60%;
+}
+
+.setTime {
+    float: right;
+    width: 30%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.calendarForm {
+    padding: 5px;
+    width: 23%;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.errorMessage {
+    float: left;
+    margin: 0;
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+input:invalid {
+    border-bottom: 2px solid #B30101;
+}
+
+input:invalid~input {
+    border-bottom: 2px solid #B30101;
+}
+
+input:valid {
+    border-bottom: 2px solid #02E228;
+}
+
+input:valid~input {
+    border-bottom: 2px solid #02E228;
+}
+
+form input:invalid~p:after {
+    content: "Date occure in the past";
+    color: #CC0000;
+}
+
+.calendarForm button {
+    margin-left: 80%;
+    margin-top: 5%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}

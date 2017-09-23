@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Task4</title>
+</head>
+<body>
+    <form class="calendarForm" action="./data/data.txt" target="result">
+        <div>
+            <span class="headline">Event Name</span>
+            <p class="describeText">Mel's Birthday Celebration</p>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <td class="headline">From</td>
+                </tr>
+                <hr>
+                <tr>
+                    <td>
+                        <input class="setDate" type="date" name="fromDate" value="2014-10-02" min="2017-09-22" required>
+                        <input class="setTime" type="time" name="fromTime" value="19:30">
+                        <p class="errorMessage"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="headline">To</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="setDate" type="date" name="toDate" value="2014-10-02" min="2017-09-22" required>
+                        <input class="setTime" type="time" name="toTime" value="23:30">
+                        <p class="errorMessage"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <span class="headline">Description</span>
+            <p class="describeText">
+                Come help celebrate Mel's birthday with dinner, drinks and putt-putt
+            </p>
+        </div>
+
+        <div>
+            <button type="submit"><img src="./img/button.png" alt="Submit Button" width="50" height="62"></button>
+        </div>
+    </form>
+
+    <div class="result">
+        <iframe name="result" srcdoc="output" width="30%" height="60" align="middle">
+            Браузер не поддерживает плавающие фреймы!
+        </iframe>
+    </div>
+</body>
+</html>
