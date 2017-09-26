@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'OPTIMistral-Graff';
+    src:url('../fonts/OPTIMistral-Graff.ttf.woff') format('woff'),
+        url('../fonts/OPTIMistral-Graff.ttf.svg#OPTIMistral-Graff') format('svg'),
+        url('../fonts/OPTIMistral-Graff.ttf.eot'),
+        url('../fonts/OPTIMistral-Graff.ttf.eot?#iefix') format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+}
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, 
+samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, 
+footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+header {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    background: url(../img/header.png) repeat;
+}
+
+.caption {
+    position: absolute;
+    width: 22%;
+    height: 70px;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #fff;
+    opacity: .95;
+    outline: 5px solid #fff;
+    border: 2px solid black;
+    box-shadow: 0px 1px 0px 6px rgba(0, 0, 0, .2);
+    font-family: 'OPTIMistral-Graff';
+    font-size: 6vh;
+    text-align: center;
+    line-height: 180%;
+}
+
+.firstBlock {
+    position: relative;
+    height: 115px;
+    margin: 8px;
+    border: 1px solid #ebebeb;
+}
+
+.secondBlock {
+    height: 110px;
+    margin: 8px;
+    background-color: #333333;
+    border: 1px solid;
+    border-color: #292929 #292929 black #292929;
+    box-shadow: 1px -1px 0px 1px rgba(0, 0, 0, .3);
+}
+
+.line1, .line2, .line3 {
+    height: 33.3%;
+}
+
+.line1 {
+    padding: 20px 0 0 22px;;
+}
+
+.line2, .line3 {
+    padding: 0 0 0 22px;
+}
+
+a {
+    position: relative;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    border: 1px solid transparent; 
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.firstBlock a {
+    box-shadow: -1px 1px 0px 0px rgba(3, 90, 29, 0.5);
+}
+
+.secondBlock a {
+    box-shadow: 0px 0px 0px 1px rgba(4, 24, 13, 0.3);
+}
+
+.pinkButton {
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #DA0588;
+    font-size: 18px;
+    text-shadow: 0 -1px 1px rgba(102, 1, 77, 0.75);
+    background: linear-gradient(0, #E01793, #e956ab)
+}
+
+.greenButton {
+    top: 2px;
+    right: 1px;
+    padding: 3px 5px 3px 5px;
+    font-size: 7px;
+    text-shadow: 0 -1px 1px rgba(82, 182, 15, 0.75);
+    background: linear-gradient(0, #9dc819, #abcc43)
+}
+
+.blueButton {
+    bottom: 3px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #4a95e9;
+    font-size: 7px;
+    text-shadow: 0 -1px 1px rgba(2, 104, 117, 0.75);
+    background: linear-gradient(0, #3f8fe9, #5d9ee9)
+}
+
+.redButton {
+    bottom: 3px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #eb3a3a;
+    font-size: 7px;
+    text-shadow: 0 -1px 1px rgba(201, 28, 28, 0.75);
+    background: linear-gradient(0, #eb3d3d, #ec5b5b)
+}
+
+.orangeButton {
+    bottom: 13px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ff7628;
+    font-size: 8px;
+    text-shadow: 0 -1px 1px rgba(211, 115, 26, 0.75);
+    background: linear-gradient(0, #ff6e1a, #ff823e)
+}
+
+.yellowButton {
+    bottom: 13px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ffc139;
+    font-size: 8px;
+    text-shadow: 0 -1px 1px rgba(209, 133, 2, 0.75);
+    background: linear-gradient(0, #ffbe2d, #ffc74c)
+}
+
+.secondBlock .line2 .blueButton {
+    
+    padding: 2px 5px 2px 5px;
+}
+
+.secondBlock .line2 .redButton {
+    
+    font-size: 8px;
+    padding: 3px 6px 3px 6px;
+}
+
+.secondBlock .line3 .orangeButton {
+    
+    font-size: 6px;
+    padding: 2px 5px 2px 5px;
+}
+
+.secondBlock .line3 .yellowButton {
+    
+    font-size: 7px;
+    padding: 2px 5px 2px 5px;
+}
+
