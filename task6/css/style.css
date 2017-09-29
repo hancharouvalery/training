@@ -1,0 +1,117 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, 
+samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, 
+footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html {
+    font: 16px Helvetica, sans-serif;;
+}
+
+.calendar-form__main {
+    padding: 5px;
+    width: 23%;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+}
+
+.calendar-section__description {
+    margin: 5px 0 10px 0;
+}
+
+.calendar-section__name {
+    margin: 5px 0 0 0;
+}
+
+.date-section__name {
+    margin: 5px 0 0 0;
+}
+
+.calendar-section__name_text-style {
+    font-size: 12px;
+    color: #979797;
+}
+
+.date-section__name_text-style {
+    font-size: 12px;
+    color: #979797;
+}
+
+.date-section__input-date {
+    width: 60%;
+    font-size: 16px;
+    border: none;
+    background-color: #FAFAFA;
+    outline: none;
+}
+
+.date-section__input-time {
+    width: 30%;
+    font-size: 16px;
+    margin: 0 0 0 10px;
+    border: none;
+    background-color: #FAFAFA;
+    outline: none;
+}
+
+.date-section__input-date:invalid~.date-section__error:after {
+    content: "Date occure in the past";
+    font-size: 12px;
+    color: #CC0000;
+}
+
+.date-section__input-date:invalid {
+    border-bottom: 2px solid #B30101;
+}
+
+.date-section__input-date:invalid~.date-section__input-time {
+    border-bottom: 2px solid #B30101;
+}
+
+.date-section__input-date:valid {
+    border-bottom: 2px solid #00A018;
+}
+
+.date-section__input-date:valid~.date-section__input-time {
+    border-bottom: 2px solid #00A018;
+}
+
+.button__section {
+    margin-left: 80%;
+    margin-top: 5%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.button__success {
+    width: 50px;
+    height: 62px;
+}
+
+.button__success:hover {
+    cursor: pointer;
+}
+
+.result-section {
+    text-align: center;
+}
+
+.result-section__frame {
+    width: 30%; 
+    height: 60px;
+    border: 1px solid grey;
+    align: middle;
+}
+
+
+
+

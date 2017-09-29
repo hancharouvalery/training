@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Task6</title>
+</head>
+<body>
+    <div class="calendar-form">
+        <form class="calendar-form__main" action="./data/data.txt" target="result">
+            <div class="calendar-section">
+                <div class="calendar-section__name calendar-section__name_text-style">
+                    Event Name
+                </div>
+                <div class="calendar-section__description">
+                    Mel's Birthday Celebration
+                </div>
+            </div>
+
+            <div class="date-section">
+                    <div class="date-section__name date-section__name_text-style">From</div>
+                    <input class="date-section__input-date" type="date" name="fromDate" value="2014-10-02" min="2017-09-22" required>
+                    <input class="date-section__input-time" type="time" name="fromTime" value="19:30">
+                    <p class="date-section__error"></p>
+            </div>
+            
+            <div class="date-section">
+                    <div class="date-section__name date-section__name_text-style">To</div>
+                    <input class="date-section__input-date" type="date" name="toDate" value="2014-10-02" min="2017-09-22" required>
+                    <input class="date-section__input-time" type="time" name="toTime" value="23:30">
+                    <p class="date-section__error"></p>
+            </div>
+
+            <div class="calendar-section">
+                <div class="calendar-section__name calendar-section__name_text-style">
+                    Desciption
+                </div>
+                <div class="calendar-section__description">
+                    Come help celebrate Mel's birthday with dinner, drinks and putt-putt
+                </div>
+            </div>
+
+            <div class="button">
+                <button class="button__section" type="submit">
+                    <img class="button__success" src="./img/button.png" alt="Submit Button">
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="result-section">
+        <iframe class="result-section__frame" name="result" srcdoc="output">
+            Браузер не поддерживает плавающие фреймы!
+        </iframe>
+    </div>
+</body>
+</html>
