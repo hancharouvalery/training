@@ -1,0 +1,112 @@
+    /* first line */
+    .ht-main-page__head-section {
+        height: auto;
+    }
+
+    .ht-main-page__photo-sector {
+       display: none; 
+    }
+
+    .ht-main-page__info-sector {
+        width: 100%;
+        
+    }
+
+    .ht-nav__menu {
+        margin: 5% 0 0 5%;
+    }
+
+    .ht-inform-sector__self-text {
+        margin: 10% 0 0 0;
+    }
+
+    /* second line */
+    .ht-main-page__about-me-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ht-main-page__self-photo {
+        display: none;
+    }
+
+    .ht-main-page__text-about-me,
+    .ht-main-page__progress-about-me,
+    .ht-main-page__skills {
+        width: 100%;
+    }
+
+    /* third line */
+    .ht-main-page__skills-sections {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .ht-main-page__skill-sector {
+        width: 100%;
+        height: auto;
+    }
+
+    .ht-main-page__skill-sector_orange {
+        background-color: #BD832D;
+    }
+
+    /* fourth line */
+    .ht-main-page__exp-section {
+        height: auto;
+    }
+
+    .ht-main-page__exp-photo {
+        display: none;
+    }
+
+    .ht-main-page__exp-info {
+        width: 100%;
+    }
+
+    /* fifth lane */
+
+    .ht-main-page__educ-section {
+        height: auto;
+    }
+
+    .ht-main-page__educ-photo {
+        display: none;
+    }
+
+    /* sixth line */
+    .ht-main-page__quot-section {
+        height: 60vh;
+    }
+
+    .ht-quot-content__describe-text_big {
+        font-size: 1.3em;
+    }
+
+    /* seventh line */
+    .ht-main-page__feedback-section {
+        height: auto;
+        
+        flex-direction: column;
+    }
+
+    .ht-main-page__contact-photo {
+        display: none;
+    }
+
+    .ht-main-page__contact-data,
+    .ht-main-page__form-section,
+    .ht-main-page__contact-section {
+        width: 100%;
+    }
+
+    /*  footer */
+    .ht-main-page__footer {
+        height: auto;
+        font-size: .9em;
+    }
+
+    .ht-main-page__social-link {
+        padding: 0 5px;
+    }

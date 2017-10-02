@@ -1,0 +1,673 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, 
+samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, 
+footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+@font-face {
+    font-family: 'SourseSansPro';
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ht-main-page {
+    width:100%;
+    font-family: 'SourseSansPro';
+    font-size: 14px;
+}
+
+/* PAGE FIRST LINE*/
+
+.ht-main-page__head-section {
+    display: flex;
+    height: 100vh;
+}
+
+/* ---- left sectiom ---- */
+
+.ht-main-page__photo-sector {
+    width: 50%;
+    background-color: #f0e2d7;
+    background-image: url(../img/5.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.ht-logo-sector__logo-name {
+    margin: 3% 0 0 25%;
+}
+
+.ht-logo-sector__logo-name_font {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px white;
+    opacity: .7;
+}
+
+/* ---- right section ----*/
+
+/* NAVIGATION BLOCK */
+.ht-main-page__info-sector {
+    width: 50%;
+    background-color: #f0e2d7;
+}
+
+.ht-nav__menu {
+    margin: 5% 0 0 13%;
+}
+
+.ht-nav__menu-link {
+    padding: 1em;
+    color: #6e6a5f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ht-nav__menu-link_active {
+    color: #dbb66f;
+}
+
+.ht-nav__menu-link:hover {
+    color: #dbb66f;
+}
+
+/* INFORMATION BLOCK */
+
+.ht-inform-sector__self-text {
+    margin: 22% 0 0 0;
+    padding: 0 8%;    
+}
+
+.ht-inform-sector__par {
+    padding: 1% 0;
+    color: #252b27;
+}
+
+.ht-inform-sector__par_custom-font {
+    font-size: 2.5em;
+    opacity: .9;
+}
+
+.ht-inform-sector__par_opacity {
+    opacity: .6;
+}
+
+.ht-inform-sector__name {
+    font-weight: bold;
+}
+
+/* BUTTON BLOCK */
+
+.ht-button-sector__start-button {
+    display: inline-block;
+    margin: 3% 0 5% 8%;
+    padding: 10px 35px;
+    font-size: .8em;
+    font-weight: bold;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    color: #28292d;
+    border: 2px solid #28292d;
+    border-radius: 30px;
+    opacity: .9;
+}
+
+.ht-button-sector__start-button:hover {
+    color: #dbb66f;
+    border-color: #dbb66f;
+}
+
+/* PAGE SECOND LINE */
+
+.ht-main-page__about-me-section {
+    display: flex;
+    min-height: 50vh;
+}
+
+.ht-main-page__text-about-me {
+    width: 50%;
+    padding: 3% 0;
+    background-color: #fff;
+}
+
+.ht-auctor-sector__describe-text {
+    padding: 0.5% 5%;
+}
+
+/* abot me block - text styles */
+
+.ht-auctor-sector__describe-text_big-font {
+    font-size: 2.5em;
+    opacity: .8;
+}
+
+.ht-auctor-sector__describe-text_or-font {
+    color: #efbc6b;
+}
+
+.ht-auctor-sector__describe-text_font-text {
+    opacity: .6;
+}
+
+/* skills block */
+
+.ht-main-page__progress-about-me {
+    display: flex;
+    width: 50%;
+}
+
+.ht-main-page__self-photo {
+    width: 50%;
+    background-color: #fff;
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.ht-main-page__skills {
+    width: 50%;
+    background-color: #e4ae58;
+}
+
+.ht-skill-progress__container {
+    margin: 7%  10%;
+}
+
+.ht-skill-progress__progress-name {
+    margin: 15px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*progress bar */
+
+.ht-skill-progress__fe {
+    background: #fff;
+    height: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ht-skill-progress__fe::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    background: #000000;
+}
+
+.ht-skill-progress__bp {
+    background: #fff;
+    height: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ht-skill-progress__bp::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: #000000;
+}
+
+.ht-skill-progress__hc {
+    background: #fff;
+    height: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ht-skill-progress__hc::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 80%;
+    background: #000000;
+}
+
+/* skills block - text styles */
+
+.ht-skill-progress__text-head,
+.ht-skill-progress__fe-per,
+.ht-skill-progress__bp-per,
+.ht-skill-progress__hc-per {
+    color: #fff;
+    
+}
+
+.ht-skill-progress__text-head {
+    padding: 10px 0;
+}
+
+.ht-skill-progress__text-head_big-font {
+    font-size: 2.4em;
+}
+
+.ht-skill-progress__fe-name,
+.ht-skill-progress__bp-name,
+.ht-skill-progress__hc-name,
+.ht-skill-progress__fe-per,
+.ht-skill-progress__bp-per,
+.ht-skill-progress__hc-per {
+    font-weight: bold;
+}
+
+/* PAGE THIRD LINE */
+
+.ht-main-page__skills-sections {
+    display: flex;
+    height: 50vh;
+}
+
+.ht-main-page__skill-sector {
+    width: 25%;
+    padding: 6% 2%;
+}
+
+/* inside content */
+
+.ht-skill-content {
+    text-align: center;
+}
+
+.ht-skill-content__describe-text {
+    margin: 8% 0;
+}
+
+.ht-skill-content__describe-text_big {
+    font-size: 2em;
+}
+
+.ht-skill-content__describe-text_opacity {
+    opacity: .7;
+}
+
+/* block color modificator */
+
+.ht-main-page__skill-sector_orange {
+    background-color: #e4ae58;
+    color: #fff;
+}
+
+.ht-main-page__skill-sector_rose {
+    background-color: #e9714c;
+    color: #fff;
+}
+
+.ht-main-page__skill-sector_black {
+    background-color: #161616;
+    color: #fff;
+}
+
+.ht-main-page__skill-sector_white {
+    background-color: #fff;
+    color: black;
+}
+
+/* FOURTH LINA PAGE */ 
+
+.ht-main-page__exp-section {
+    display: flex;
+    height: 60vh;
+}
+
+/* left block */
+
+.ht-main-page__exp-photo {
+    width: 50%;
+    background-color: #f0e2d7;
+    background-image: url(../img/4.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+}
+
+/* right block */
+
+.ht-main-page__exp-info {
+    width: 50%;
+    color: #fff;
+}
+
+.ht-main-page__exp-info_rose {
+    background-color: #e9714c;
+}
+
+.ht-my-exp__header {
+    margin: 6% 10%;
+}
+
+.ht-my-exp__text-name {
+    font-size: 2.5em;
+}
+
+.ht-my-exp__header::after {
+    content: '';
+    display: block;
+    height: 0.5vh;
+}
+
+.ht-my-exp__text {
+    margin: 3% 0;
+    font-size: 1.1em;
+}
+
+.ht-my-exp__prev-job {
+    display:flex;
+    margin: 2% 10%;
+}
+
+.ht-my-exp__job-describe {
+    margin: 0 0 0 5%;
+}
+
+.ht-my-exp__text-head {
+    display: inline-block;
+    font-size: 2em;
+}
+
+.ht-my-exp__text-date {
+    display: inline-block;
+}
+
+.ht-my-exp__text-date {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.ht-my-exp__text-date_brown {
+    color: #6e353c;
+}
+
+/* FIFTH LANE */
+
+.ht-main-page__educ-section {
+    display: flex;
+    height: 70vh;
+}
+
+.ht-main-page__educ-photo {
+    width: 50%;
+    background-image: url(../img/3.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+}
+
+.ht-main-page__exp-info_yellow {
+    background-color: #e4ae58;
+}
+
+.ht-my-exp__text-date_green {
+    color: #8e6c24;
+}
+
+/* SIXTH LINE */
+
+.ht-main-page__quot-section {
+    width: 100%;
+    height: 60vh;
+    color: #CECECE;
+    background-image: url(../img/6.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.ht-main-page__quot-sector {
+    padding: 7% 20%;
+    position: relative;
+    z-index: 10;
+}
+
+.ht-quot-content {
+    text-align: center;
+}
+
+.ht-quot-content__describe-text {
+    margin: 5% 0;
+}
+
+.ht-main-page__quot-section::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background-color: #000000;
+    z-index: 5;
+    opacity: .4;
+}
+
+.ht-quot-content__describe-text_big {
+    font-size: 2.5em;
+}
+
+.ht-quot-content__describe-text_opacity {
+    opacity: .8;
+}
+
+/* SEVETH LINE */
+
+/* left section */
+
+.ht-main-page__feedback-section {
+    display: flex;
+    height: 85vh;
+}
+
+.ht-feedback__text-header {
+    font-size: 2.5em;
+}
+
+.ht-feedback__text {
+    margin: 3% 0 7% 0;
+}
+
+.ht-main-page__form-section {
+    width: 50%;
+    background-color: #e9714c;
+    color: #DBDBDB;
+}
+
+.ht-feedback {
+    padding: 5% 6%;
+}
+
+.ht-feedback__input {
+    width: 100%;
+    margin: 4% 0 2% 0;
+    display: block;
+    padding: 7px 7px;
+    font-family: 'SourseSansPro';
+    font-size: 1.1em;
+    color: #DBDBDB;
+    border: none;
+    border-bottom: 1px solid #e5ab57;
+    background-color: #e9714c;
+    outline: none;
+}
+
+.ht-feedback__message {
+    width: 100%;
+    margin: 4% 0 2% 0;
+    display: block;
+    padding: 7px 7px;
+    font-family: 'SourseSansPro';
+    color: #DBDBDB;
+    font-size: 1.1em;
+    border: none;
+    border-bottom: 1px solid #e5ab57;
+    background-color: #e9714c;
+    outline: none;
+}
+
+/* !!!!!! PLACEHOLDERS !!!!!!!! */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #DBDBDB;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #DBDBDB;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #DBDBDB;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #DBDBDB;
+}
+/* --------------------------------- */
+
+.ht-feedback__button {
+    margin: 3% 0;
+    padding: 10px 120px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #2C2C2C;
+    background-color: #F0F0F0;
+}
+
+.ht-feedback__button:hover {
+    cursor: pointer;
+}
+
+/*right section */
+
+.ht-main-page__contact-section {
+    width: 50%;
+    display: flex;
+}
+
+.ht-main-page__contact-photo {
+    width: 50%;
+    background-image: url(../img/2.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.ht-main-page__contact-data {
+    width: 50%;
+    padding: 4% 6%;
+    background-color: #161616;
+    color: #fff;
+}
+
+.ht-contacts__header-text {
+    padding: 7% 0 0 0;
+    font-size: 2em;
+}
+
+.ht-contacts__text {
+    padding: 4% 0;
+    color: #696969;
+    font-size: 1.2em;
+}
+
+.ht-contacts__text-in {
+    position: relative;
+    bottom: 5px;
+    padding: 0 0 0 15px;
+    color: #696969;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.ht-contacts__line {
+    margin: 4% 0;
+    display: flex;
+}
+
+.ht-contacts__text-in_orange {
+    color: #ae904a;
+}
+
+/* FOOTER */
+
+.ht-main-page__footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color: #757575;
+}
+
+.ht-main-page__footer-text {
+    margin: 10% 0 0 0;
+}
+
+.ht-main-page__custom-text {
+    color: #E0BD6A;
+}
+
+.ht-main-page__social {
+    margin: 25px 0;
+}
+
+.ht-main-page__social i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px
+}
+
+.ht-main-page__social-link {
+    color: #757575;
+    padding: 0 20px;
+}
+
+.ht-main-page__social-link i:hover {
+    border-radius: 50%;
+    background-color: #dbb66f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
