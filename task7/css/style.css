@@ -19,22 +19,20 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     font-style: normal;
 }
 
-.ht-main-page {
-    width:100%;
+html {
     font-family: 'SourseSansPro';
     font-size: 14px;
 }
 
 /* PAGE FIRST LINE*/
-
-.ht-main-page__head-section {
+.ht-header-page__head-section {
     display: flex;
     height: 100vh;
 }
 
 /* ---- left sectiom ---- */
 
-.ht-main-page__photo-sector {
+.ht-header-page__photo-sector {
     width: 50%;
     background-color: #f0e2d7;
     background-image: url(../img/5.jpg);
@@ -57,7 +55,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 /* ---- right section ----*/
 
 /* NAVIGATION BLOCK */
-.ht-main-page__info-sector {
+.ht-header-page__info-sector {
     width: 50%;
     background-color: #f0e2d7;
 }
@@ -83,7 +81,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* INFORMATION BLOCK */
 
-.ht-inform-sector__self-text {
+.ht-header-page__self-text {
     margin: 22% 0 0 0;
     padding: 0 8%;    
 }
@@ -104,6 +102,10 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 .ht-inform-sector__name {
     font-weight: bold;
+}
+
+.ht-inform-sector__hyphen {
+    white-space: nowrap;
 }
 
 /* BUTTON BLOCK */
@@ -130,12 +132,12 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* PAGE SECOND LINE */
 
-.ht-main-page__about-me-section {
+.ht-self-skills__about-me-section {
     display: flex;
-    min-height: 50vh;
+    height: 50vh;
 }
 
-.ht-main-page__text-about-me {
+.ht-self-skills__text-about-me {
     width: 50%;
     padding: 3% 0;
     background-color: #fff;
@@ -162,12 +164,12 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* skills block */
 
-.ht-main-page__progress-about-me {
+.ht-self-skills__progress-about-me {
     display: flex;
     width: 50%;
 }
 
-.ht-main-page__self-photo {
+.ht-self-skills__self-photo {
     width: 50%;
     background-color: #fff;
     background-image: url(../img/1.jpg);
@@ -176,13 +178,10 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     background-size: cover;
 }
 
-.ht-main-page__skills {
+.ht-self-skills__skills {
     width: 50%;
+    padding: 7%  8%;
     background-color: #e4ae58;
-}
-
-.ht-skill-progress__container {
-    margin: 7%  10%;
 }
 
 .ht-skill-progress__progress-name {
@@ -193,14 +192,14 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /*progress bar */
 
-.ht-skill-progress__fe {
+.ht-skill-progress__design {
     background: #fff;
     height: 2px;
     position: relative;
     overflow: hidden;
 }
 
-.ht-skill-progress__fe::before {
+.ht-skill-progress__design::before {
     content: '';
     position: absolute;
     height: 2px;
@@ -208,14 +207,14 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     background: #000000;
 }
 
-.ht-skill-progress__bp {
+.ht-skill-progress__backend {
     background: #fff;
     height: 2px;
     position: relative;
     overflow: hidden;
 }
 
-.ht-skill-progress__bp::before {
+.ht-skill-progress__backend::before {
     content: '';
     position: absolute;
     height: 2px;
@@ -223,14 +222,14 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     background: #000000;
 }
 
-.ht-skill-progress__hc {
+.ht-skill-progress__html-css {
     background: #fff;
     height: 2px;
     position: relative;
     overflow: hidden;
 }
 
-.ht-skill-progress__hc::before {
+.ht-skill-progress__html-css::before {
     content: '';
     position: absolute;
     height: 2px;
@@ -241,9 +240,9 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 /* skills block - text styles */
 
 .ht-skill-progress__text-head,
-.ht-skill-progress__fe-per,
-.ht-skill-progress__bp-per,
-.ht-skill-progress__hc-per {
+.ht-skill-progress__design-per,
+.ht-skill-progress__backend-per,
+.ht-skill-progress__html-css-per {
     color: #fff;
     
 }
@@ -256,24 +255,29 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     font-size: 2.4em;
 }
 
-.ht-skill-progress__fe-name,
-.ht-skill-progress__bp-name,
-.ht-skill-progress__hc-name,
-.ht-skill-progress__fe-per,
-.ht-skill-progress__bp-per,
-.ht-skill-progress__hc-per {
+.ht-skill-progress__design-name,
+.ht-skill-progress__backend-name,
+.ht-skill-progress__html-css-name,
+.ht-skill-progress__design-per,
+.ht-skill-progress__backend-per,
+.ht-skill-progress__html-css-per {
     font-weight: bold;
+    white-space: nowrap;
 }
 
 /* PAGE THIRD LINE */
 
-.ht-main-page__skills-sections {
+.ht-skills-panel__skills-sections {
     display: flex;
     height: 50vh;
 }
 
-.ht-main-page__skill-sector {
-    width: 25%;
+.ht-skills-panel__double-block {
+    display: flex;
+}
+
+.ht-skills-panel__skill-sector {
+    width: 50%;
     padding: 6% 2%;
 }
 
@@ -297,52 +301,56 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* block color modificator */
 
-.ht-main-page__skill-sector_orange {
+.ht-skills-panel__skill-sector_orange {
     background-color: #e4ae58;
     color: #fff;
 }
 
-.ht-main-page__skill-sector_rose {
+.ht-skills-panel__skill-sector_rose {
     background-color: #e9714c;
     color: #fff;
 }
 
-.ht-main-page__skill-sector_black {
+.ht-skills-panel__skill-sector_black {
     background-color: #161616;
     color: #fff;
 }
 
-.ht-main-page__skill-sector_white {
+.ht-skills-panel__skill-sector_white {
     background-color: #fff;
     color: black;
 }
 
 /* FOURTH LINA PAGE */ 
 
-.ht-main-page__exp-section {
+.ht-self-exp__exp-section {
     display: flex;
-    height: 60vh;
+    height: auto;
 }
 
 /* left block */
 
-.ht-main-page__exp-photo {
+.ht-self-exp__exp-photo {
     width: 50%;
     background-color: #f0e2d7;
-    background-image: url(../img/4.jpg);
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: cover;
 }
 
+.ht-self-exp__exp-photo_phone-img {
+    background-image: url(../img/4.jpg);
+}
+
 /* right block */
 
-.ht-main-page__exp-info {
+.ht-self-exp__exp-info {
     width: 50%;
+    padding: 0 0 2% 0;
     color: #fff;
 }
 
-.ht-main-page__exp-info_rose {
+.ht-self-exp__exp-info_rose {
     background-color: #e9714c;
 }
 
@@ -377,6 +385,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 .ht-my-exp__text-head {
     display: inline-block;
     font-size: 2em;
+    
 }
 
 .ht-my-exp__text-date {
@@ -394,20 +403,15 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* FIFTH LANE */
 
-.ht-main-page__educ-section {
-    display: flex;
-    height: 70vh;
+.ht-self-exp__self-exp-section_direction {
+    flex-direction: row-reverse;
 }
 
-.ht-main-page__educ-photo {
-    width: 50%;
+.ht-self-exp__exp-photo_pen-img {
     background-image: url(../img/3.jpg);
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: cover;
 }
 
-.ht-main-page__exp-info_yellow {
+.ht-self-exp__exp-info_yellow {
     background-color: #e4ae58;
 }
 
@@ -417,7 +421,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* SIXTH LINE */
 
-.ht-main-page__quot-section {
+.ht-quot__quot-section {
     width: 100%;
     height: 60vh;
     color: #CECECE;
@@ -427,7 +431,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     background-size: cover;
 }
 
-.ht-main-page__quot-sector {
+.ht-quot__quot-sector {
     padding: 7% 20%;
     position: relative;
     z-index: 10;
@@ -441,7 +445,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     margin: 5% 0;
 }
 
-.ht-main-page__quot-section::before {
+.ht-quot__quot-section::before {
     content: '';
     display: block;
     position: absolute;
@@ -464,34 +468,34 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 
 /* left section */
 
-.ht-main-page__feedback-section {
+.ht-feedback__feedback-section {
     display: flex;
-    height: 85vh;
+    height: auto;
 }
 
-.ht-feedback__text-header {
-    font-size: 2.5em;
-}
-
-.ht-feedback__text {
-    margin: 3% 0 7% 0;
-}
-
-.ht-main-page__form-section {
+.ht-feedback__form-section {
     width: 50%;
     background-color: #e9714c;
     color: #DBDBDB;
 }
 
-.ht-feedback {
-    padding: 5% 6%;
+.ht-feedback__container {
+    padding: 6% 4%;
 }
 
-.ht-feedback__input {
+.ht-testimonial__text-header {
+    font-size: 2.5em;
+}
+
+.ht-testimonial__text {
+    margin: 3% 0 7% 0;
+}
+
+.ht-testimonial__input {
     width: 100%;
     margin: 4% 0 2% 0;
     display: block;
-    padding: 7px 7px;
+    padding: 7px 0 7px 7px;
     font-family: 'SourseSansPro';
     font-size: 1.1em;
     color: #DBDBDB;
@@ -501,11 +505,11 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     outline: none;
 }
 
-.ht-feedback__message {
+.ht-testimonial__message {
     width: 100%;
     margin: 4% 0 2% 0;
     display: block;
-    padding: 7px 7px;
+    padding: 7px 0 7px 7px;
     font-family: 'SourseSansPro';
     color: #DBDBDB;
     font-size: 1.1em;
@@ -530,9 +534,9 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
 }
 /* --------------------------------- */
 
-.ht-feedback__button {
+.ht-testimonial__button {
     margin: 3% 0;
-    padding: 10px 120px;
+    padding: 10px 15%;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -540,18 +544,18 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     background-color: #F0F0F0;
 }
 
-.ht-feedback__button:hover {
+.ht-testimonial__button:hover {
     cursor: pointer;
 }
 
 /*right section */
 
-.ht-main-page__contact-section {
+.ht-feedback__contact-section {
     width: 50%;
     display: flex;
 }
 
-.ht-main-page__contact-photo {
+.ht-feedback__contact-photo {
     width: 50%;
     background-image: url(../img/2.jpg);
     background-repeat: no-repeat;
@@ -559,7 +563,7 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     background-size: cover;
 }
 
-.ht-main-page__contact-data {
+.ht-feedback__contact-data {
     width: 50%;
     padding: 4% 6%;
     background-color: #161616;
@@ -595,11 +599,16 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     color: #ae904a;
 }
 
+.ht-contacts__wrap {
+    white-space: nowrap;
+}
+
 /* FOOTER */
 
-.ht-main-page__footer {
+.ht-footer__content {
     width: 100%;
     height: 10vh;
+    padding: 9% 0;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -607,19 +616,19 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     color: #757575;
 }
 
-.ht-main-page__footer-text {
-    margin: 10% 0 0 0;
+.ht-footer__footer-text {
+    text-align: center;
 }
 
-.ht-main-page__custom-text {
+.ht-footer__custom-text {
     color: #E0BD6A;
 }
 
-.ht-main-page__social {
+.ht-footer__social {
     margin: 25px 0;
 }
 
-.ht-main-page__social i {
+.ht-footer__social i {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -627,17 +636,28 @@ footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     line-height: 40px
 }
 
-.ht-main-page__social-link {
+.ht-footer__social-link {
     color: #757575;
     padding: 0 20px;
 }
 
-.ht-main-page__social-link i:hover {
+.ht-footer__social-link i:hover {
     border-radius: 50%;
     background-color: #dbb66f;
 }
 
+@media (max-width: 1100px) {
+    .ht-nav__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 8%; 
+    }
 
+    .ht-nav__menu-link {
+        padding: 5px 0;
+    }
+}
 
 
 
