@@ -6,7 +6,7 @@ function argMemory() {
     return function() {
 
         if(arguments.length === 0) {
-            return console.log(arr);
+            return arr;
         }
 
         for (var i=0; i < arguments.length; i++) {
@@ -22,10 +22,10 @@ f(1,2);
 f("hello");
 f(false);
 f(true);
-f();
+console.log(f());
 f({a:1}, 'Some string');
-f();
-f();
+console.log(f());
+console.log(f());
 
 
 
