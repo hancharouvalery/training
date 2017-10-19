@@ -27,41 +27,41 @@
         var elementsDate = document.querySelectorAll('.date-section__input-date');
         
         for (var i = 0, length = elementsDate.length; i < length; i++) {
-        (function(element) {
-            
-            
-            var name = element.getAttribute('name');
-            
-            element.value = localStorage.getItem(name) || element.value;
-                        
-            element.onblur = function() {
-            localStorage.setItem(name, element.value);
-            };
-        })(elementsDate[i]);
+            (function(element) {
+                var name = element.getAttribute('name');
+                
+                element.value = localStorage.getItem(name) || element.value;
+                            
+                element.onblur = function() {
+                localStorage.setItem(name, element.value);
+                };
+            })(elementsDate[i]);
         };
 
         //input Time localStorage
         var elementsTime = document.querySelectorAll('.date-section__input-time');
         
         for (var i = 0, length = elementsDate.length; i < length; i++) {
-        (function(element) {
-            var name = element.getAttribute('name');
-    
-            element.value = localStorage.getItem(name) || element.value;
-    
-            element.onblur = function() {
-            localStorage.setItem(name, element.value);
-            };
-        })(elementsTime[i]);
+            (function(element) {
+                var name = element.getAttribute('name');
+        
+                element.value = localStorage.getItem(name) || element.value;
+        
+                element.onblur = function() {
+                localStorage.setItem(name, element.value);
+                };
+            })(elementsTime[i]);
         };
 
         // radio button localStorage
         var place = document.getElementsByName('place');
+
         for (var i = 0; i < place.length; i++) {
             place[i].onclick = function() {
             localStorage.setItem('active', this.value);
-          }
+            };
         }
+
         if(localStorage.getItem('active')) {
             var active = localStorage.getItem('active');
             document.querySelector('input[name="place"][value="' + active + '"]').setAttribute('checked','checked');
@@ -72,10 +72,7 @@
         
         dressCode.onchange = function() {
             localStorage.setItem('code', dressCode.value);
-            
         }
-
-        console.log(dressCode.value);
         
         if (localStorage.getItem('code')) {
             dressCode.options[localStorage.getItem('code')].selected = true;
@@ -86,14 +83,12 @@
         
         detail.onchange = function() {
             localStorage.setItem('detail', detail.value);
-            
         }
      
         if (localStorage.getItem('detail')) {
             detail.options[localStorage.getItem('detail')].selected = true;
         }
 
-        } else 
-        {
+        } else {
             alert('Данные не сохранятся, ваш браузер не поддерживает Localstorage');
         }
