@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Task5</title>
+</head>
+<body>
+    <div class="calendar-form">
+        <form class="calendar-form__main" action="./data/data.txt" target="result">
+            <div class="calendar-section">
+                <div class="calendar-section__name calendar-section__name_text-style">
+                    Event Name
+                </div>
+                <div class="calendar-section__description">
+                    Mel's Birthday Celebration
+                </div>
+            </div>
+
+            <div class="date-section">
+                    <div class="date-section__name date-section__name_text-style">From</div>
+                    <input class="date-section__input-date" type="date" name="fromDate" min="2017-09-22" required>
+                    <input class="date-section__input-time" type="time" name="fromTime">
+                    <p class="date-section__error"></p>
+            </div>
+            
+            <div class="date-section">
+                    <div class="date-section__name date-section__name_text-style">To</div>
+                    <input class="date-section__input-date" type="date" name="toDate" min="2017-09-22" required>
+                    <input class="date-section__input-time" type="time" name="toTime">
+                    <p class="date-section__error"></p>
+            </div>
+
+            <div class="calendar-section">
+                <div class="calendar-section__name calendar-section__name_text-style">
+                    Desciption
+                </div>
+                <div class="calendar-section__description">
+                    Come help celebrate Mel's birthday with dinner, drinks and putt-putt
+                </div>
+            </div>
+
+            <div class="person-section">
+                <div class="person-section__event-details-text">Event Details</div>
+                <hr>
+                <input class="person-section__adress" name="adress" type="text" placeholder="Enter the address of the event">
+                <p class="person-section__event-details-text">Select the place of the event</p>
+                <div class="person-section__time-selection">
+                <p class="person-section__radio"><input type="radio" name="place" value="home"></input>Home</p>
+                <p class="person-section__radio"><input type="radio" name="place" value="pub"></input>Pub</p>
+                </div>
+                <div class="person-section__dress-code">
+                    <p class="person-section__event-details-text">Important Requirement</p>
+                    <hr>
+                    <div class="person-section__requirment">
+                        <p class="person-section__event-details-text">Dress Code</p>
+                        <select class="person-section__code">
+                            <option value="0"></option>
+                            <option value="1">Costume Party</option>
+                            <option value="2">No Dress Code</option>
+                        </select>
+                    </div>
+                    <div class="person-section__requirment">
+                        <p class="person-section__event-details-text">Drinks</p>
+                        <select class="person-section__detail">
+                            <option value="0"></option>
+                            <option value="1">Free Alcohol</option>
+                            <option value="2">NO Free Alcohol</option>
+                        </select>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="button">
+                <button class="button__section" type="submit">
+                    <img class="button__success" src="./img/button.png" alt="Submit Button">
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="result-section">
+        <iframe class="result-section__frame" name="result" srcdoc="output">
+            Браузер не поддерживает плавающие фреймы!
+        </iframe>
+    </div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
