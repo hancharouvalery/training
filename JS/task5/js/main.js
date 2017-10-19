@@ -1,5 +1,5 @@
+    
     if ('localStorage' in window && window['localStorage'] !== null) {
-        
         if (performance.navigation.type == 1) {
             localStorage.clear();
         };
@@ -32,7 +32,7 @@
             
             var name = element.getAttribute('name');
             
-            element.value = localStorage.getItem(name);
+            element.value = localStorage.getItem(name) || element.value;
                         
             element.onblur = function() {
             localStorage.setItem(name, element.value);
@@ -47,7 +47,7 @@
         (function(element) {
             var name = element.getAttribute('name');
     
-            element.value = localStorage.getItem(name);
+            element.value = localStorage.getItem(name) || element.value;
     
             element.onblur = function() {
             localStorage.setItem(name, element.value);
