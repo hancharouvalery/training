@@ -1,0 +1,79 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, 
+samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, 
+footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+.ht-calendar-container {
+    width: 315px;
+}
+
+.ht-calendar-container__header {
+    width: 100%;
+}
+
+.ht-calendar-container__arrow {
+    width: 30%;
+    display: inline-block;
+}
+
+.ht-calendar-container__arrow:hover {
+    cursor: pointer;
+}
+
+.ht-calendar-container__arrow_text-style {
+    background-color: white;
+    border: none;
+    color: rgb(117, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    outline: none;
+}
+
+.ht-calendar-container__month {
+    display: inline-block;
+    padding: 0 5% 0 5%;
+}
+
+.ht-calendar-container__year {
+    display: inline-block;
+}
+
+.ht-calendar-container__month-and-year {
+    width: 35%;
+    display: inline-block;
+}
+
+.ht-calendar-container__week-container {
+    width: 100%;
+}
+
+.ht-calendar-container__week-cell {
+    display: inline-block;
+    width: 14.2%;
+    color: rgb(20, 0, 136);
+    text-align: center;
+    font-weight: bold;
+}
+
+.ht-calendar-container__days-container {
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+}
+
+.ht-calendar-container__days-cell {
+    width: 14.2%;
+    height: 18px;
+    display: inline-block;
+    text-align: center;
+}
