@@ -1,50 +1,80 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var xhr = new XMLHttpRequest();
-var urlArray = ['http://www.nbrb.by/API/ExRates/Currencies/100',
-'http://www.nbrb.by/API/ExRates/Rates/170?onDate=Sat%2C+28+Oct+2017+21%3A00%3A00+GMT&ParamMode=0', 
-'http://www.nbrb.by/API/ExRates/Currencies/1',
-'http://www.nbrb.by/API/ExRates/Rates/310?ParamMode=0',
-'http://www.nbrb.by/API/ExRates/Rates/170?onDate=Sat%2C+30+Sep+2017+21%3A00%3A00+GMT&ParamMode=0'];
+var url1 = 'http://www.nbrb.by/API/ExRates/Currencies/100';
+var url2 = 'http://www.nbrb.by/API/ExRates/Rates/170?onDate=Sat%2C+28+Oct+2017+21%3A00%3A00+GMT&ParamMode=0';
+var url3 = 'http://www.nbrb.by/API/ExRates/Currencies/1';
+var url4 = 'http://www.nbrb.by/API/ExRates/Rates/310?ParamMode=0';
+var url5 = 'http://www.nbrb.by/API/ExRates/Rates/170?onDate=Sat%2C+30+Sep+2017+21%3A00%3A00+GMT&ParamMode=0';
 
-function doPromise() {
-    var promise = new Promise(function (resolve, reject) {
-    xhr.onreadystatechange = function () { 
-        if (xhr.readyState != 4) return;
+function doPromise(url) {
+    return new Promise(function (resolve, reject) {
+      
+      xhr.open(
+        'GET', 
+        url, 
+        true
+      );
 
-        if (xhr.status != 200) {
-            reject((xhr.status + ': ' + xhr.statusText));
-        } else {
-            resolve('-----------------------------------------------------------------\n' + xhr.responseText);
-        }
+      xhr.onreadystatechange = function () { 
+          if (xhr.readyState != 4) return;
 
-    }
-    });
+          if (xhr.status != 200) {
+              reject((xhr.status + ': ' + xhr.statusText));
+          } else {
+              resolve('-----------------------------------------------------------------\n' + xhr.responseText);
+          }
 
-    promise
-    .then(
-      result => {
-        console.log(result); // result - аргумент resolve
-      },
-      error => {
-        console.log(error); // error - аргумент reject
       }
-    );
 
-    return promise;
+      xhr.send();
+    });
 };
 
-for(var i=0; i< urlArray.length; i++) {
-    
-    doPromise();
 
-    xhr.open(
-      'GET', 
-      urlArray[i], 
-      false
-    );
-  
-    xhr.send();
-  }
+    
+doPromise(url1).then(
+    result => {
+      console.log(result); // 1
+      return doPromise(url2);
+    },
+    error => {
+      console.log(error);
+    } 
+  ).then(
+    result => {
+      console.log(result); // 2
+      return doPromise(url3);
+    },
+    error => {
+      console.log(error); 
+    }
+  ).then(
+    result => {
+      console.log(result); // 3
+      return doPromise(url4);
+    },
+    error => {
+      console.log(error); 
+    }
+  ).then(
+    result => {
+      console.log(result); // 4
+      return doPromise(url5);
+    },
+    error => {
+      console.log(error); 
+    }
+  ).then(
+    result => {
+      console.log(result); // 5
+    },
+    error => {
+      console.log(error); 
+    }
+  );
+     
+        
+    
 
 
 
