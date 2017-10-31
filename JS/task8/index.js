@@ -6,7 +6,7 @@ var url4 = 'http://www.nbrb.by/API/ExRates/Rates/310?ParamMode=0';
 var url5 = 'http://www.nbrb.by/API/ExRates/Rates/170?onDate=Sat%2C+30+Sep+2017+21%3A00%3A00+GMT&ParamMode=0';
 
 var xhr = new XMLHttpRequest();
-function doReq1() {
+function doReq1(callback) {
   xhr.open('GET', url1, true);
   xhr.onreadystatechange = function () { 
     if (xhr.readyState != 4) return;
@@ -16,14 +16,16 @@ function doReq1() {
     } else {
       console.log("REQUEST #1\n-----------------------------------------------------------------");
       console.log(xhr.responseText);
-      doReq2();
+      if(callback) {
+        callback();
+      }
     }
   };
   xhr.send();
 };
 
 var xhr2 = new XMLHttpRequest();
-function doReq2() {
+function doReq2(callback) {
   xhr2.open('GET', url2, true);
   xhr2.onreadystatechange = function () { 
     if (xhr2.readyState != 4) return;
@@ -33,7 +35,9 @@ function doReq2() {
     } else {
       console.log("REQUEST #2\n-----------------------------------------------------------------");
       console.log(xhr2.responseText);
-      doReq3();
+      if(callback) {
+        callback();
+      }
     }
     
   };
@@ -41,7 +45,7 @@ function doReq2() {
 };
 
 var xhr3 = new XMLHttpRequest();
-function doReq3() {
+function doReq3(callback) {
   xhr3.open('GET', url3, true);
   xhr3.onreadystatechange = function () { 
     if (xhr3.readyState != 4) return;
@@ -51,7 +55,9 @@ function doReq3() {
     } else {
       console.log("REQUEST #3\n-----------------------------------------------------------------");
       console.log(xhr3.responseText);
-      doReq4();
+      if(callback) {
+        callback();
+      }
     }
     
   };
@@ -69,7 +75,9 @@ function doReq4(callback) {
     } else {
       console.log("REQUEST #4\n-----------------------------------------------------------------");
       console.log(xhr4.responseText);
-      doReq5();
+      if(callback) {
+        callback();
+      }
     }
     
   };
@@ -87,14 +95,26 @@ function doReq5(callback) {
     } else {
       console.log("REQUEST #5\n-----------------------------------------------------------------");
       console.log(xhr5.responseText);
+      if(callback) {
+        callback();
+      }
     }
     
   };
   xhr5.send();
 };
 
+doReq1(function() {
+  doReq2(function() {
+    doReq3(function() {
+      doReq4(function(){
+        doReq5()
+      })
+    })
+  })
+});        
 
-doReq1();
+
 
 
 
