@@ -108,7 +108,7 @@ doReq1(function() {
   doReq2(function() {
     doReq3(function() {
       doReq4(function(){
-        doReq5()
+        doReq5();
       })
     })
   })
