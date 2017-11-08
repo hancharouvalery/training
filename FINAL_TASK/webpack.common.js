@@ -5,9 +5,9 @@ const merge = require('webpack-merge');
 
 module.exports = {
     entry: {
-      app: './src/app.js'
+      app: './src/app/app.js'
     },
-
+    
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: '[name].build.js',
@@ -15,6 +15,12 @@ module.exports = {
 
     module: {
       rules: [
+        {
+          enforce: "pre",
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: "eslint-loader"
+        },        
         {
           test: /\.js$/,
           exclude: /(node_modules)/,
@@ -41,19 +47,19 @@ module.exports = {
         },
         {
           test: /\.(png|svg|jpg|gif)$/,
-          use: ['file-loader']
+          use: ['file-loader'],
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: ['file-loader']
+          use: ['file-loader'],
         }
       ]
     },
 
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Webpack app',
-        template: './src/index.html'
+        title: 'MovieDB',
+        template: './src/app/index.html'
       })
     ]
 };

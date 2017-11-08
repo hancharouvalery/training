@@ -11,11 +11,9 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor", 
-            filename: "[name].build.js"
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-          compress: true
+          name: "vendor", 
+          filename: "[name].build.js"
         })
-    ]
+    ],
+    devtool: 'source-map',
 });

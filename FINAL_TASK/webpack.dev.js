@@ -3,8 +3,14 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-    devtool: "inline-source-map",
+    devtool: 'source-map',
     devServer: {
-        port: 3000    
-    }
+        compress: true,   
+        hot:true,
+        port: 3000
+    },
+    plugins: [
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ]
 });

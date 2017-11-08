@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.common.js",
-    "release": "webpack --config webpack.release.js"
+    "build": "webpack --config webpack.build.js",
+    "release": "webpack --config webpack.release.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -22,8 +23,11 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "env-development": "^1.0.2",
+    "eslint": "^4.10.0",
+    "eslint-loader": "^1.9.0",
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
+    "perfect-scrollbar": "^1.2.0",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4",
