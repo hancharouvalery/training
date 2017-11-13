@@ -1,0 +1,53 @@
+
+
+.mdb-form__container {
+    margin: 1% 0 0 10%;
+}
+
+.mdb-form__container_hide {
+    display: none;
+}
+
+.mdb-form__error-title {
+    color: red;
+}
+
+.mdb-form__error-checkbox {
+    color: red;
+}
+
+.mdb-form__content-container {
+    display: flex;
+}
+
+.mdb-form__genre {
+    margin: 0 0 0 5%;
+}
+
+.mdb-form__genre-cols {
+    display: flex;
+    padding: 10px;
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 5px;
+}
+
+.mdb-form__conrol-buttons {
+    margin-left: 70%;    
+}
+
+.mdb-form__add-button {
+    margin: 0 5% 0 0;
+    padding: 5px 40px;
+    border: 1px solid white;
+    background-color: rgb(51, 134, 51);
+    
+}
+
+.mdb-form__cancel-button {
+    border: 1px solid white;
+    padding: 5px 40px;
+    background-color: rgb(155, 41, 41);
+    
+}
+
+

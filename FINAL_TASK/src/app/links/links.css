@@ -11,8 +11,17 @@
     color: rgb(26, 26, 26);
     font-size: 18px;
     font-weight: bold;
+    text-decoration: underline;
+}
+
+.mdb-links__header-link_none {
+    display:none;
 }
 
 .mdb-links__header-link_final-link {
     border: none;
+}
+
+.mdb-links__header-link:hover {
+    cursor: pointer;
 }

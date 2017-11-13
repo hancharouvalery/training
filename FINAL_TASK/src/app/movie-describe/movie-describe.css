@@ -1,0 +1,26 @@
+.mdb-movies-describe__links-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mdb-movies-describe__container {
+    width: 95%;
+    margin: 5% 0 0 5%;
+}
+
+.mdb-movies-describe__poster-and-text {
+    display: flex;
+}
+
+.mdb-movies-describe__poster {
+    margin: 0 0 0 3%;
+}
+
+.mdb-movies-describe__overview {
+    padding: 0 5%;
+}
+
+.mdb-movies-describe__title-text {
+    font-size: 1.5em;
+    font-weight: bold;
+}

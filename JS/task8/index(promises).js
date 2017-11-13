@@ -21,7 +21,7 @@ function doPromise(url) {
           if (xhr.status != 200) {
               reject((xhr.status + ': ' + xhr.statusText));
           } else {
-              resolve('-----------------------------------------------------------------\n' + xhr.responseText);
+              resolve(xhr.responseText);
           }
 
       }
