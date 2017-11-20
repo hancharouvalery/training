@@ -5,7 +5,7 @@ const merge = require('webpack-merge');
 
 module.exports = {
     entry: {
-      app: './src/app/app.js'
+      app: './src/app/index.js'
     },
     
     output: {

@@ -1,0 +1,7 @@
+.mdb-posters-tape__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 2% 0 0 5%;
+}
+
