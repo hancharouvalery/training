@@ -61,3 +61,7 @@
 a {
     text-decoration: none;
 }
+
+.mdb-page-navigation__lib-count {
+    color: rgb(0, 190, 0);
+}

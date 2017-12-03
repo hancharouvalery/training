@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'IndieFlower';
+    src: url('../../fonts/IndieFlower.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mdb-advanced-search__container{
+    position: fixed;
+    top: 5px; left: 40%;
+    width:37%;
+    padding: 0 1% 2% 1%;
+    background-color: rgb(169, 176, 179);
+    border-radius: 5px;
+    opacity: .95;
+}
+
+.mdb-advanced-search__container_hide {
+    display: none;
+}
+
+.mdb-advanced-search__header-text {
+    padding: 5px 0 0 5px;
+    font-size: 1.2em;
+    color: rgb(59, 59, 59);
+    font-weight: bold;
+}
+
+.mdb-advanced-search__section {
+    display: flex;
+}
+
+.mdb-advanced-search__section-content {
+    width: 50%;
+    padding: 0 0 0 20px;
+}
+
+.mdb-advanced-search__section-button {
+    margin: 98% 0 0 0;
+}
+
+.mdb-advanced-search__button {
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.mdb-advanced-search__popularity {
+    position: relative;
+    width: 60%;
+    height: 25px;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 5px;
+}
+
+.mdb-advanced-search__popularity-first {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    width: 50%;
+    height: 25px;
+    background-color: rgb(174, 187, 0);
+}
+
+.mdb-advanced-search__slider {
+    position: absolute;
+    left: 50%;
+}
+
+.mdb-advanced-search__slider:hover {
+    cursor: pointer;
+}
+
+.mdb-advanced-search__vote {
+    position: relative;
+    width: 60%;
+    height: 25px;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 5px;
+}
+
+.mdb-advanced-search__vote-first {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    width: 50%;
+    height: 25px;
+    background-color: rgb(3, 163, 43);
+}
+
+.mdb-advanced-search__slider-vote {
+    position: absolute;
+    left: 50%;
+}
+
+.mdb-advanced-search__slider-vote:hover {
+    cursor: pointer;
+}
+
+.mdb-advanced-search__section-content-genre {
+    width: 65%;
+}
+
+.mdb-advanced-search__section-content-button {
+    width: 30%;
+    padding: 80px 0 0 10px;
+}
+
+.mdb-advanced-search__title {
+    width: 50%;
+    margin: 5px 0 10px 0;
+    font-family: 'IndieFlower';
+}
+
+.mdb-advanced-search__overview {
+    width: 80%;
+    height: 60%;
+    font-family: 'IndieFlower';
+}

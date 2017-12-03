@@ -18,6 +18,16 @@
     display:none;
 }
 
+.mdb-links__header-link-border {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 5% 0 5%;
+    color: rgb(26, 26, 26);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .mdb-links__header-link_final-link {
     border: none;
 }

@@ -1,5 +1,113 @@
 .mdb-poster__posterCell {
-    box-sizing: border-box;
-    padding: 15px;
-    list-style: none;
+    position: relative;
+    margin: 10px 15px;
+    width: 175px;
+    height: 278px;
+    line-height: 238px;
+    text-align: center;
+}
+
+.mdb-poster__back-pos {
+    position: absolute;
+    width: 175px;
+    height: 278px;
+    top:0; right: 0; bottom: 0; left: 0px;
+    background-color: #000;
+    opacity: .7;
+    font-weight: bold;
+    color: #fff;
+}
+
+.mdb-poster__back-pos_hide {
+    display: none;
+}
+
+.mdb-poster__poster {
+    display: block;
+    width: 175px;
+    height: 278px;
+}
+
+.mdb-poster__poster_green-border {
+    border: 2px solid rgb(0, 184, 0);
+}
+
+.mdb-poster__header {
+    display: flex;
+    justify-content: flex-end;
+    width: 175px;
+    height: 40px;
+    border-bottom: 2px solid rgb(151, 151, 151);
+}
+
+.mdb-poster__info-container {
+    position: relative;
+    padding: 5px;
+}
+
+.mdb-poster__overview-info {
+    position: absolute;
+    width: 180px;
+    height: 70px;
+    background-color: rgb(69, 63, 184);
+    opacity: .8;
+    top:33px; left:-70px;
+}
+
+.mdb-poster__next {
+    position: absolute;
+    background-color: rgb(69, 63, 184);
+    width: 180px;
+    height: 15px;
+    top: 70px;
+}
+
+.mdb-poster__next-dots {
+    display: inline-block;
+    vertical-align: top;
+    line-height: .9em;
+    font-weight: bold;
+}
+
+.mdb-poster__overview-info-text {
+    display: inline-block;
+    height: 66px;
+    padding: 5px 5px 0 5px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.1em;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.mdb-poster__overview-info_hide {
+    display: none;
+}
+
+.mdb-poster__add-container {
+    padding: 5px;
+}
+
+.mdb-poster__remove-container {
+    padding: 5px;
+}
+
+.mdb-poster__add-container_hide {
+    display: none;
+}
+
+.mdb-poster__remove-container_hide {
+    display: none;
+}
+
+.mdb-poster__info {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.mdb-poster__add {
+    display: block;
+    width: 28px;
+    height: 28px;
 }

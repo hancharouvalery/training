@@ -1,0 +1,39 @@
+.mdb-support__container {
+    width: 90%;
+    margin: 0 0 0 8%;
+    padding: 10% 0 0 0;
+}
+
+.mdb-support__links-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mdb-support__name {
+    display: block;
+    width: 20%;
+}
+
+.mdb-support__description {
+    display: block;
+    width: 40%;
+    height: 30vh;
+    margin: 3% 0 0 0;
+}
+
+.mdb-support__buttons-section {
+    margin: 2% 0 0 50%;
+}
+
+.mdb-support__cancel-button {
+    border: 1px solid white;
+    padding: 5px 40px;
+    background-color: rgb(155, 41, 41);
+}
+
+.mdb-support__submit-button {
+    margin: 0 2% 0 0;
+    padding: 5px 40px;
+    border: 1px solid white;
+    background-color: rgb(51, 134, 51);
+}

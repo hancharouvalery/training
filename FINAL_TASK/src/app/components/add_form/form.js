@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
+import {
+  HashRouter as Router,
+  Route,
+  NavLink,
+  Switch
+} from 'react-router-dom';
 import './form.css';
 import { connect } from 'react-redux';
 import { formView } from './../../store/actions';
+import { addMovies } from './../../store/actions';
+import GenreBoard from './../genre_board/genre_board';
+import it from '../../../userImg/it.jpg';
 
 class Form extends Component {
     constructor(props) {
       super(props);
       this.state = {title: '',
                     overview: '',
-                    genres:[],
+                    genres: [],
                     uploadPic: ''
                   };
       this.onTitleChange = this.onTitleChange.bind(this);
+      this.updateGenreBoard = this.updateGenreBoard.bind(this);
       this.onOverviewChange = this.onOverviewChange.bind(this);
-      this.onCheckChange = this.onCheckChange.bind(this);
       this.uploadPicture = this.uploadPicture.bind(this);
       this.validationForm = this.validationForm.bind(this);
       this.closeForm = this.closeForm.bind(this);
@@ -30,21 +39,14 @@ class Form extends Component {
       this.setState({overview: val});
     }
 
-    onCheckChange(e) {
-      var valueName = e.target.value;
-      if(e.target.checked === true) {
-        this.setState((array) => ({
-          genres: array.genres.concat(valueName)
-        }));
-      } else {
-        this.setState((array) => ({
-          genres: array.genres.filter(function(item) {
-            return item !== valueName;
-        })}));
-      }
-    }
     uploadPicture(e) {
-      this.setState({uploadPic: e.target.value});
+      var fileName = e.target.value;
+      var pos = fileName.lastIndexOf("\\");
+       if(pos !== -1)
+        {
+          fileName = fileName.substr(pos+1);
+        }
+      this.setState({uploadPic: fileName});
     }
     validationForm() {
       var validCheckbox = this.state.genres.length;
@@ -58,12 +60,38 @@ class Form extends Component {
       e.preventDefault();
       this.props.formView('none');
     }
-    addDataToLocal(){
-      var movieData = localStorage.getItem("myMovies");
-      var movieLocal = `[{'title': ${this.state.title}}, {'overview': ${this.state.overview}}, {'genres': ${this.state.genres}}]`;
-      localStorage.setItem("myMovies", movieLocal);
+    addDataToLocal(e){
+      console.log(this.state.genres);
+      function getRandomFloat(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+      var id = getRandomFloat(1, 99999);
+      var movieLocalObj = {id:id, title: this.state.title,
+      overview: this.state.overview,
+      genre_ids: this.state.genres,
+      poster_path: it,
+      vote_average: '0%',
+      popularity:'0%',
+      add:'block',
+      remove:'none',
+      borderPlus: 'none'};
+      this.props.addMovies(movieLocalObj);
+    }
+
+    updateGenreBoard(value, check) {
+      if(check === true) {
+        this.setState((array) => ({
+          genres: array.genres.concat(+value)
+        }));
+      } else {
+        this.setState((array) => ({
+          genres: array.genres.filter(function(item) {
+            return item !== +value;
+        })}));
+      }
     }
     render() {
+      console.log(this.state.uploadPic);
       return (
       <div className='mdb-form' style={{display: this.props.display}}>
         <div className='mdb-form__container'>
@@ -80,101 +108,20 @@ class Form extends Component {
                 </div>
                 <textarea name="overview" rows="8" cols="30" className="mdb-form__overview" onChange={this.onOverviewChange}></textarea>
               </div>
-              <div className='mdb-form__genre'>
-                <p className='mdb-form__genre-name'>Genre</p>
-                <div className='mdb-form__genre-cols' onChange={this.onCheckChange}>
-                  <div className='mdb-form__genre-column'>
-                    <label><input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="action"
-                    />
-                    Action
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="adventure"
-                    />
-                    Adventure
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="thriller"
-                    />
-                    Thriller
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="comedy"
-                    />
-                    Comedy
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="fantasy"
-                    />
-                    Fantasy
-                    </label>
-                  </div>
-                  <div className='mdb-form__genre-column'>
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="drama"
-                    />
-                    Drama
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="horror"
-                    />
-                    Horror
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="criminal"
-                    />
-                    Criminal
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="war"
-                    />
-                    War
-                    </label><br />
-                    <label>
-                    <input
-                    className='mdb-form__genre-type'
-                    type="checkbox"
-                    value="documentary"
-                    />
-                    Documentary
-                    </label>
-                  </div>
-                </div>
+              <div className='mdb-form__genre-container'>
+                <GenreBoard updateGenreBoard={this.updateGenreBoard}/>
                 {this.state.genres.length===0 && <p className='mdb-form__error-checkbox'>Genre is requred</p>}
               </div>
               <div className='mdb-form__upload-pic-container'>
-                <input className='mdb-form__upload' id='file' type="file" multiple onChange={this.uploadPicture}/>
+
               </div>
             </div>
             <div className='mdb-form__conrol-buttons'>
-                <button className='mdb-form__add-button' disabled={this.validationForm()} onClick={this.addDataToLocal}>Add</button>
+                <NavLink to={'/movies'}><button
+                className='mdb-form__add-button'
+                disabled={this.validationForm()}
+                onClick={this.addDataToLocal}
+                >Add</button></NavLink>
                 <button className='mdb-form__cancel-button' onClick={this.closeForm}>Cancel</button>
             </div>
           </form>
@@ -190,9 +137,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  formView: (form) => dispatch(formView(form))
+  formView: (form) => dispatch(formView(form)),
+  addMovies: (movies) => dispatch(addMovies(movies))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
 
-
+//<input className='mdb-form__upload' id='file' type="file" multiple onChange={this.uploadPicture}/>

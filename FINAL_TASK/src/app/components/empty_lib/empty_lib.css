@@ -1,0 +1,19 @@
+.mdb-empty-lib__empty-lib-container {
+	padding: 10% 0 0 35%;
+}
+
+.mdb-empty-lib__empty-lib-pic {
+	display: block;
+	width: 256px;
+	height: 256px;
+	background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.mdb-empty-lib__empty-lib-text {
+	padding: 0 0 0 3%;
+	font-size: 1.7em;
+	font-weight: bold;
+	color: rgb(70, 61, 61);
+}
